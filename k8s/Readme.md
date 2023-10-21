@@ -1,0 +1,1 @@
+k8s manifests for streamhard app
