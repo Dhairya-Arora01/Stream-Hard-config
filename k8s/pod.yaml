@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: frontend
+  labels:
+    env: dev
+spec:
+  containers:
+    - name: nginx
+      image: dhairyarora0208/streamhard-frontend
+      ports:
+        - containerPort: 80

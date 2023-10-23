@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-config
+data:
+  HOST: db-svc.default.svc.cluster.local
+  USER: postgres
+  PASSWORD: password
+  DBNAME: postgres
+  PORT: "5432"
+  SIGNINGSECRET: saini72

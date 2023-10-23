@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-dep
+spec:
+  replicas: 2
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      component: back
+  template:
+    metadata:
+      labels:
+        component: back
+    spec:
+      containers:
+      - name: backend
+        image: dhairyarora0208/streamhard-backend
+        ports:
+          - name: backend-port
+            containerPort: 8000
+        envFrom:
+          - configMapRef:
+              name: backend-config
