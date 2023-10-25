@@ -11,8 +11,8 @@ spec:
       env:
         - name: POSTGRES_PASSWORD
           valueFrom:
-            configMapKeyRef:
-              name: backend-config
-              key: PASSWORD
+            secretKeyRef:
+              name: mysecret
+              key: password
       ports:
         - containerPort: 5432

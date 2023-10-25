@@ -22,6 +22,17 @@ spec:
         ports:
           - name: backend-port
             containerPort: 8000
+        env:
+          - name: SIGNINGSECRET
+            valueFrom:
+              secretKeyRef:
+                name: mysecret
+                key: signingSecret
+          - name: PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: mysecret
+                key: password
         envFrom:
           - configMapRef:
               name: backend-config

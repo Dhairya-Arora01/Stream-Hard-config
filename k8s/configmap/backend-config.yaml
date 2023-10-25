@@ -5,7 +5,5 @@ metadata:
 data:
   HOST: db-svc.default.svc.cluster.local
   USER: postgres
-  PASSWORD: password
   DBNAME: postgres
   PORT: "5432"
-  SIGNINGSECRET: saini72
