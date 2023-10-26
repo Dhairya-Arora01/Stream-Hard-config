@@ -36,3 +36,9 @@ spec:
         envFrom:
           - configMapRef:
               name: backend-config
+        readinessProbe:
+          initialDelaySeconds: 300
+          periodSeconds: 60
+          httpGet:
+            path: /hello
+            port: 8000
