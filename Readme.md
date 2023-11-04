@@ -3,12 +3,13 @@ This repository contains the configuration files for the streamhard app.
 https://github.com/Dhairya-Arora01/Stream-Hard
 
 ## Checklist
-- [ ] Configmaps
-- [ ] Secrets
+- [x] Configmaps
+- [x] Secrets
 - [ ] Services
+- [ ] Volumes
 - [ ] Deployments
 - [ ] Sealed Secrets
 - [ ] DB duplication
-- [ ] Stunner gateway for webRTC
+- [x] Stunner gateway for webRTC
 - [ ] Autoscaling
 - [ ] RBAC

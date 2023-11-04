@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: backend-dep
 spec:
-  replicas: 1
+  replicas: 2
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -37,8 +37,8 @@ spec:
           - configMapRef:
               name: backend-config
         readinessProbe:
-          initialDelaySeconds: 300
-          periodSeconds: 60
+          initialDelaySeconds: 5
+          periodSeconds: 5
           httpGet:
             path: /hello
             port: 8000

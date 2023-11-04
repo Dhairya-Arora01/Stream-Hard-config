@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-dep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: front
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        component: front
+    spec:
+      containers:
+        - name: frontned
+          imagePullPolicy: Always
+          image: dhairyarora0208/streamhard-frontend:minikube
+          ports:
+            - name: frontend-port
+              containerPort: 80
