@@ -28,14 +28,31 @@ spec:
               secretKeyRef:
                 name: mysecret
                 key: signingSecret
+          - name: HOST
+            valueFrom:
+              secretKeyRef:
+                name: pg-cluster-app
+                key: host
+          - name: USER
+            valueFrom:
+              secretKeyRef:
+                name: pg-cluster-app
+                key: user
+          - name: DBNAME
+            valueFrom:
+              secretKeyRef:
+                name: pg-cluster-app
+                key: dbname
+          - name: PORT
+            valueFrom:
+              secretKeyRef:
+                name: pg-cluster-app
+                key: port
           - name: PASSWORD
             valueFrom:
               secretKeyRef:
-                name: mysecret
+                name: pg-cluster-app
                 key: password
-        envFrom:
-          - configMapRef:
-              name: backend-config
         readinessProbe:
           initialDelaySeconds: 5
           periodSeconds: 5
