@@ -5,11 +5,11 @@ https://github.com/Dhairya-Arora01/Stream-Hard
 ## Checklist
 - [x] Configmaps
 - [x] Secrets
-- [ ] Services
-- [ ] Volumes
-- [ ] Deployments
-- [ ] Sealed Secrets
-- [ ] DB duplication
+- [x] Services
+- [x] Volumes
+- [x] Deployments
+- [x] Sealed Secrets
+- [x] DB duplication
 - [x] Stunner gateway for webRTC
 - [ ] Autoscaling
 - [ ] RBAC
